@@ -34,6 +34,10 @@ public class Calculadora {
                 // Operación módulo:
                 respuesta =  numero1 % numero2;
                 break;
+            case 'r' :
+                // Operación módulo:
+                respuesta =  Math.pow(numero1, (double)1/numero2);
+                break;
                 
             default:
                 throw new IllegalArgumentException("Operación inválida.");
@@ -50,8 +54,7 @@ public class Calculadora {
         System.out.println("Ingrese el número 2");
         int numero2 = lector.nextInt();
         // Lectura de la operación a realizar
-        // TODO: DEBES ADICIONAR EL SÍMBOLO DE ^ Y % PARA CALCULAR LA POTENCIA Y EL MÓDULO
-        System.out.println("Ingrese la operación (+, -, *, /, ^, %)");
+        System.out.println("Ingrese la operación (+, -, *, /, ^, %, r)");
         char operacion = lector.next().charAt(0);
         
         double respuesta = calcular(numero1, numero2, operacion);
